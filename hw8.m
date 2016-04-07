@@ -11,11 +11,11 @@ end
 
 % isovalues problem
 % method: simplify the given equation (should give an ellipse-like eqn)
-% plot with ezplot
+% plot with meshgrid
 syms X Y
 hold on;
-iso = 2*X^2 - 2*X*Y + 2*Y^2 + X + Y;
-ezcontour(iso,[-3,3,-3,3])
-plot([1.5; 1])
-plot([1.5; 1.25])
-plot([1;1])
+iso = 0.5*(2*X^2 - 2*X*Y + 2*Y^2) - (X + Y);
+ezcontour(iso,[-3,3,-3,3]);
+plot([1.5; 1]);
+plot([1.5; 1.25]);
+plot([1;1]);
